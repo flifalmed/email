@@ -54,7 +54,12 @@ main {
   display: flex;
   flex-direction: column;
 }
-
+figure {
+  width: 100%;
+}
+figure .img-mobile {
+  width: 100%;
+}
 .img-desktop {
   display: none;
 }
@@ -176,6 +181,9 @@ form #email::placeholder {
 
 /* Desktop Screen */
 @media (min-width: 725px) {
+  figure {
+    width: fit-content;
+  }
   body {
     display: flex;
   }
