@@ -147,15 +147,6 @@ form #submit {
   transition-duration: 0.5s;
 }
 
-form #submit:hover {
-  background: linear-gradient(
-    135deg,
-    var(--linear-one-from),
-    var(--linear-two-from)
-  );
-  box-shadow: rgb(0, 0, 0, 0.2) 0 18px 25px 0px;
-}
-
 form #email:focus {
   outline: none;
   color: var(--Dark-Grayish-Red);
@@ -232,6 +223,14 @@ form #email::placeholder {
 
   header.container .logo {
     height: 35px;
+  }
+  form #submit:hover {
+    background: linear-gradient(
+      135deg,
+      var(--linear-one-from),
+      var(--linear-two-from)
+    );
+    box-shadow: rgb(0, 0, 0, 0.2) 0 18px 25px 0px;
   }
 }
 /* Small Devices */
