@@ -39,9 +39,6 @@ body {
   overflow: hidden;
 }
 body {
-  display: flex;
-  justify-content: center;
-  align-items: center;
   height: 100vh;
   width: 100%;
   background: linear-gradient(
@@ -81,7 +78,7 @@ header.container .logo {
 
 article.container {
   text-align: center;
-  margin: auto;
+  margin-top: 50px;
   display: grid;
   align-content: center;
 }
@@ -185,6 +182,7 @@ form #email::placeholder {
 
   .img-desktop {
     display: block;
+    height: 100vh;
   }
 
   .img-mobile {
@@ -198,9 +196,11 @@ form #email::placeholder {
     padding-right: 180px;
   }
   article.container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: auto;
     text-align: start;
-    padding-top: 0;
-    padding-bottom: 0;
   }
   article.container h1 {
     font-size: 5.5rem;
