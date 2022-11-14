@@ -1,0 +1,265 @@
+* {
+  box-sizing: border-box;
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --Desaturated-Red: hsl(0, 36%, 70%);
+  --Soft-Red: hsl(0, 93%, 68%);
+
+  /* ### Neutral */
+
+  --Dark-Grayish-Red: hsl(0, 6%, 24%);
+
+  /* ### Gradients */
+
+  --Linear: 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%);
+
+  --linear-one-from: hsl(0, 0%, 100%);
+  --linear-one-to: hsl(0, 100%, 98%);
+
+  --Linear: 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%);
+  --linear-two-from: hsl(0, 80%, 86%);
+  --linear-two-from-op: rgb(248, 191, 191, 0.6);
+  --linear-two-to: hsl(0, 74%, 74%);
+  /* ## Typography */
+
+  /* ### Body Copy */
+
+  font-size: 16px;
+
+  font-family: "Josefin Sans", sans-serif; /*300 400 600*/
+}
+
+html,
+body {
+  overflow: hidden;
+}
+body {
+  height: 100vh;
+  width: 100%;
+  background: linear-gradient(
+    135deg,
+    var(--linear-one-from),
+    var(--linear-one-to)
+  );
+}
+
+main {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.img-desktop {
+  display: none;
+}
+
+.container {
+  padding-left: 40px;
+  padding-right: 40px;
+}
+
+header.container {
+  display: flex;
+  align-items: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  width: 100%;
+}
+
+header.container .logo {
+  height: 25px;
+}
+
+article.container {
+  text-align: center;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+article.container h2 {
+  text-transform: uppercase;
+  color: var(--Dark-Grayish-Red);
+  font-weight: 600;
+  font-size: 1.5rem;
+  letter-spacing: 8px;
+}
+
+article.container p {
+  color: var(--Desaturated-Red);
+  line-height: 1.3;
+  font-size: 1rem;
+  font-weight: 400;
+  margin-top: 10px;
+}
+
+article.container h1 {
+  text-transform: uppercase;
+  color: var(--Desaturated-Red);
+
+  font-size: 1.5rem;
+  letter-spacing: 8px;
+  font-weight: 300;
+}
+
+form {
+  position: relative;
+  height: 40px;
+  margin-top: 10px;
+  width: 100%;
+}
+
+form #email {
+  background-color: transparent;
+  border: 1px var(--linear-two-from-op) solid;
+  border-radius: 30px;
+  height: 100%;
+  width: 100%;
+  padding-left: 30px;
+  padding-right: 130px;
+}
+
+form #submit {
+  position: absolute;
+  right: 0;
+  background-color: transparent;
+  border: none;
+  border-radius: 30px;
+  height: 100%;
+  width: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  top: 0;
+  background: linear-gradient(
+    135deg,
+    var(--linear-two-from),
+    var(--linear-two-to)
+  );
+  box-shadow: rgb(0, 0, 0, 0.2) 0 7px 15px 0px;
+  transition-duration: 0.5s;
+}
+
+form #submit:hover {
+  background: linear-gradient(
+    135deg,
+    var(--linear-one-from),
+    var(--linear-two-from)
+  );
+  box-shadow: rgb(0, 0, 0, 0.2) 0 18px 25px 0px;
+}
+
+form #email:focus {
+  outline: none;
+  color: var(--Dark-Grayish-Red);
+}
+
+form #email::placeholder {
+  color: var(--linear-two-from-op);
+}
+
+#form #error p {
+  position: absolute;
+  color: var(--Soft-Red);
+  font-size: 0.8rem;
+  bottom: -30px;
+  left: 30px;
+}
+
+#form #error img {
+  position: absolute;
+  right: 100px;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+#error {
+  display: none;
+}
+
+/* Desktop Screen */
+@media (min-width: 725px) {
+  body {
+    display: flex;
+  }
+
+  .img-desktop {
+    display: block;
+  }
+
+  .img-mobile {
+    display: none;
+  }
+
+  main {
+    background: url(images/bg-pattern-desktop.svg) no-repeat;
+    background-size: cover;
+    padding-left: 180px;
+    padding-right: 180px;
+  }
+  article.container {
+    text-align: start;
+  }
+  article.container h1 {
+    font-size: 5.5rem;
+  }
+  article.container h2 {
+    margin-top: 10px;
+    font-size: 5rem;
+  }
+
+  article.container p {
+    font-size: 1.2rem;
+    margin-top: 40px;
+  }
+
+  form {
+    margin-top: 40px;
+  }
+
+  header.container {
+    padding-top: 50px;
+  }
+
+  header.container .logo {
+    height: 35px;
+  }
+}
+/* Small Devices */
+@media (max-width: 375px) {
+  .container {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  header.container {
+    height: 100px;
+  }
+
+  .container .logo {
+    height: 20px !important;
+  }
+
+  article.container h1 {
+    font-size: 1.3rem;
+  }
+
+  article.container h2 {
+    font-size: 1.3rem;
+  }
+
+  article.container p {
+    font-size: 0.9rem;
+  }
+
+  form {
+    height: 35px;
+  }
+}

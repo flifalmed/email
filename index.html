@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- displays site properly based on user's device -->
+
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./images/favicon-32x32.png"
+    />
+
+    <title>Frontend Mentor | Base Apparel coming soon page</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <main>
+      <header class="container">
+        <img class="logo" src="images/logo.svg" alt="logo" />
+      </header>
+
+      <img class="img-mobile" src="images/hero-mobile.jpg" alt="img-mobile" />
+
+      <article class="container">
+        <h1>We're</h1>
+        <h2>
+          coming
+          <br />
+          soon
+        </h2>
+        <br />
+        <p>
+          Hello fellow shoppers! We're currently building our new fashion store.
+          Add your email below to stay up-to-date with announcements and our
+          launch deals.
+        </p>
+        <br />
+        <form id="form">
+          <input id="email" type="text" placeholder="Email Address" />
+          <button id="submit">
+            <img src="images/icon-arrow.svg" alt="" />
+          </button>
+          <div id="error">
+            <p>Please provide a valid email</p>
+            <img src="images/icon-error.svg" alt="" />
+          </div>
+        </form>
+      </article>
+    </main>
+    <img class="img-desktop" src="images/hero-desktop.jpg" alt="img-desktop" />
+
+    <script src="main.js"></script>
+  </body>
+</html>
