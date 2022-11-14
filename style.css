@@ -54,12 +54,7 @@ main {
   display: flex;
   flex-direction: column;
 }
-figure {
-  width: 100%;
-}
-figure .img-mobile {
-  width: 100%;
-}
+
 .img-desktop {
   display: none;
 }
@@ -83,7 +78,7 @@ header.container .logo {
 
 article.container {
   text-align: center;
-  margin-top: 55px;
+  margin-top: 60px;
   display: grid;
   align-content: center;
 }
@@ -181,9 +176,6 @@ form #email::placeholder {
 
 /* Desktop Screen */
 @media (min-width: 725px) {
-  figure {
-    width: fit-content;
-  }
   body {
     display: flex;
   }
