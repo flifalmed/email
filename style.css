@@ -79,9 +79,8 @@ header.container .logo {
 article.container {
   text-align: center;
   height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  display: grid;
+  align-content: center;
 }
 
 article.container h2 {
