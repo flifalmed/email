@@ -78,7 +78,7 @@ header.container .logo {
 
 article.container {
   text-align: center;
-  height: 100%;
+  margin: auto;
   display: grid;
   align-content: center;
 }
