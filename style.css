@@ -206,6 +206,8 @@ form #email::placeholder {
   }
   article.container {
     text-align: start;
+    padding-top: 0;
+    padding-bottom: 0;
   }
   article.container h1 {
     font-size: 5.5rem;
