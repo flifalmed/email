@@ -192,8 +192,8 @@ form #email::placeholder {
   main {
     background: url(images/bg-pattern-desktop.svg) no-repeat;
     background-size: cover;
-    padding-left: 180px;
-    padding-right: 180px;
+    padding-left: 140px;
+    padding-right: 140px;
   }
   article.container {
     display: flex;
@@ -203,11 +203,11 @@ form #email::placeholder {
     text-align: start;
   }
   article.container h1 {
-    font-size: 5.5rem;
+    font-size: 3.5rem;
   }
   article.container h2 {
     margin-top: 10px;
-    font-size: 5rem;
+    font-size: 3.5rem;
   }
 
   article.container p {
@@ -224,7 +224,7 @@ form #email::placeholder {
   }
 
   header.container .logo {
-    height: 35px;
+    height: 30px;
   }
   form #submit:hover {
     background: linear-gradient(
