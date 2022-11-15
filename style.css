@@ -34,11 +34,10 @@
   font-family: "Josefin Sans", sans-serif; /*300 400 600*/
 }
 
-html,
 body {
-  overflow: hidden;
-}
-body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   height: 100vh;
   width: 100%;
   background: linear-gradient(
@@ -78,9 +77,11 @@ header.container .logo {
 
 article.container {
   text-align: center;
-  margin-top: 60px;
-  display: grid;
-  align-content: center;
+
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 article.container h2 {
@@ -146,6 +147,15 @@ form #submit {
   transition-duration: 0.5s;
 }
 
+form #submit:hover {
+  background: linear-gradient(
+    135deg,
+    var(--linear-one-from),
+    var(--linear-two-from)
+  );
+  box-shadow: rgb(0, 0, 0, 0.2) 0 18px 25px 0px;
+}
+
 form #email:focus {
   outline: none;
   color: var(--Dark-Grayish-Red);
@@ -182,7 +192,6 @@ form #email::placeholder {
 
   .img-desktop {
     display: block;
-    height: 100vh;
   }
 
   .img-mobile {
@@ -192,22 +201,18 @@ form #email::placeholder {
   main {
     background: url(images/bg-pattern-desktop.svg) no-repeat;
     background-size: cover;
-    padding-left: 140px;
-    padding-right: 140px;
+    padding-left: 180px;
+    padding-right: 180px;
   }
   article.container {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    margin: auto;
     text-align: start;
   }
   article.container h1 {
-    font-size: 3.5rem;
+    font-size: 5.5rem;
   }
   article.container h2 {
     margin-top: 10px;
-    font-size: 3.5rem;
+    font-size: 5rem;
   }
 
   article.container p {
@@ -224,15 +229,7 @@ form #email::placeholder {
   }
 
   header.container .logo {
-    height: 30px;
-  }
-  form #submit:hover {
-    background: linear-gradient(
-      135deg,
-      var(--linear-one-from),
-      var(--linear-two-from)
-    );
-    box-shadow: rgb(0, 0, 0, 0.2) 0 18px 25px 0px;
+    height: 35px;
   }
 }
 /* Small Devices */
